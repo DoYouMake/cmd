@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Comandos de Minecraft</title>
+    <style>
+        .command {
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Generador de Comandos de Minecraft</h1>
+    <form id="commandForm">
+        <label for="radius">Radio (r):</label>
+        <input type="number" id="radius" name="radius" value="10000" required>
+        <button type="button" onclick="adjustRadius('radius', 100)">+100</button>
+        <button type="button" onclick="adjustRadius('radius', -100)">-100</button>
+        <button type="button" onclick="adjustRadius('radius', 1000)">+1000</button>
+        <button type="button" onclick="adjustRadius('radius', -1000)">-1000</button>
+        <br>
+        <label for="adjustedRadius">Radio Ajustable:</label>
+        <input type="number" id="adjustedRadius" name="adjustedRadius" value="3000" required>
+        <button type="button" onclick="adjustRadius('adjustedRadius', 100)">+100</button>
+        <button type="button" onclick="adjustRadius('adjustedRadius', -100)">-100</button>
+        <button type="button" onclick="adjustRadius('adjustedRadius', 1000)">+1000</button>
+        <button type="button" onclick="adjustRadius('adjustedRadius', -1000)">-1000</button>
+        <br>
+        <label for="playerName">Nombre del Jugador (opcional):</label>
+        <input type="text" id="playerName" name="playerName">
+        <br>
+        <button type="button" onclick="generateCommands()">Generar Comandos</button>
+    </form>
+    <p id="commandOutput"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
